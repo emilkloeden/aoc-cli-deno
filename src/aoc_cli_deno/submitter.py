@@ -1,7 +1,7 @@
 from pathlib import Path
 
-from aoc_core import BaseSubmitter
-from aoc_core.validations import is_valid_day, is_valid_year
+from aoc_core_cli import BaseSubmitter
+from aoc_core_cli.validations import is_valid_day, is_valid_year
 
 from .local_validations import is_valid_language
 from .runner import Runner
