@@ -1,4 +1,4 @@
-# aoc
+# aoc-cli-deno
 
 A plugin for the opinionated scaffolder for Advent of Code that generates scaffolds to write solutions in javascript and execute with Deno.
 
