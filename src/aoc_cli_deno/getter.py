@@ -1,5 +1,5 @@
-from aoc_core_cli import BaseGetter
-from aoc_core_cli.validations import is_valid_day, is_valid_year
+from aoc_cli_core import BaseGetter
+from aoc_cli_core.validations import is_valid_day, is_valid_year
 
 from .local_validations import is_valid_language
 

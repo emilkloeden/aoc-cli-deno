@@ -1,7 +1,7 @@
 from pathlib import Path
 import subprocess
 
-from aoc_core_cli import BaseRunner
+from aoc_cli_core import BaseRunner
 
 class Runner(BaseRunner):
     def __init__(self, part: int, location: Path=None):
