@@ -1,4 +1,6 @@
 from pathlib import Path
+# We require python 3.10, so this is fine.
+from importlib.resources import files
 
 from aoc_cli_core import BaseInitialiser
 
@@ -15,35 +17,8 @@ class Initialiser(BaseInitialiser):
         self.set_file_content_template()
 
     def set_file_content_template(self):
-        self.file_content = '''
-const PROD = false;
-
-const TEST_INPUT = ``
-
-const INPUT =  PROD ? await Deno.readTextFile("./input.txt") : TEST_INPUT; 
-
-
-function part1() {
-    throw Error("NotImplemented");
-}
-
-function part2() {
-    throw Error("NotImplemented");
-}
-
-
-function main() {
-    const part = Deno.args[0];
-    console.log(part)
-    const parts = {
-        '1': part1,
-        '2': part2,
-    }
-    console.log(`Day: XXDAYXX Part: ${part}`);
-    console.log(parts[part]());
-}
-main();
-'''
+        resources = files("aoc_cli_python")
+        self.file_content = (resources / "resources" / "day.py").read_text()
 
     def initialise(self):
         print("[+] Scaffolding project...")
